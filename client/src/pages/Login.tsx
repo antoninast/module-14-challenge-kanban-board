@@ -9,6 +9,8 @@ const Login = () => {
     password: ''
   });
 
+  const [error, setError] = useState(false);
+
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setLoginData({
@@ -23,6 +25,8 @@ const Login = () => {
       const data = await login(loginData);
       Auth.login(data.token);
     } catch (err) {
+      // alert('Failed to login. Incorrect username or password.');
+      setError(true);
       console.error('Failed to login', err);
     }
   };
@@ -45,10 +49,10 @@ const Login = () => {
           value={loginData.password || ''}
           onChange={handleChange}
         />
+        <p className={error ? 'error': 'hide-error'}>Invalid username or password</p>
         <button type='submit'>Submit Form</button>
       </form>
     </div>
-    
   )
 };
 

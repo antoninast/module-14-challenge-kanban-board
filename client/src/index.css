@@ -242,6 +242,14 @@ tbody tr:nth-child(odd) {
   justify-content: center;
 }
 
+.hide-error {
+  display: none;
+}
+
+.error {
+  display: block;
+  color: #901515;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
