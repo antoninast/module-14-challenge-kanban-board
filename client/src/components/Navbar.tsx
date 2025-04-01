@@ -6,6 +6,7 @@ const Navbar = () => {
   const [ loginCheck, setLoginCheck ] = useState(false);
 
   const checkLogin = () => {
+    console.log('checking login . . . .', auth.loggedIn());
     if(auth.loggedIn()) {
       setLoginCheck(true);
     }
@@ -33,7 +34,9 @@ const Navbar = () => {
           <li className='nav-item'>
             <button type='button' onClick={() => {
               auth.logout();
-            }}>Logout</button>
+            }}>
+              <Link to='/'>Logout</Link>
+              </button>
           </li>
         )
       }
