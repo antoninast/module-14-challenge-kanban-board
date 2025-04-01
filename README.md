@@ -2,7 +2,39 @@
 
 **Deployed website:** https://module-14-challenge-kanban-board-gd1x.onrender.com/login
 
-## Home Page
+## Usage Instructions
+If you want to log as one of our users, you will need to login with one of these usernames and passwords:
+
+```
+User 1:
+username: JollyGuru
+password: password
+```
+```
+User 2:
+username: SunnyScribe
+password: password
+```
+```
+User 3:
+username: RadiantComet
+password: password
+```
+
+If you want to clone the repo on your computer and start working on it, you will need to:
+1. Set up .env file with:
+```
+DB_NAME=''
+DB_USER=''
+DB_PASSWORD=''
+JWT_SECRET_KEY=''
+```
+
+2. Run ```npm i```
+3. Run ```npm run build```
+4. Run ```npm run start``` or ```npm run start:dev```
+
+## Webpage Guide
 
 ### Home Page for users that are not logged in
 The user can navigate to the "Login" button and a login form will be displayed
